@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ScheduleManagementWindow extends JFrame {
 
-  private JComboBox<String> movieNameField;
+  private JComboBox<Movie> movieNameField;
   private JTextField dateField;
   private JComboBox<String> timeField;
   private JComboBox<String> cinemaField;
@@ -60,11 +60,14 @@ public class ScheduleManagementWindow extends JFrame {
 
   private void setupMovieNameField() {
     List<Movie> movieList = getMovieList();
-    List<String> movieNames = new ArrayList<>();
-    for (Movie movie : movieList) {
-      movieNames.add(movie.getTitle());
-    }
-    movieNameField = new JComboBox<>(movieNames.toArray(new String[0]));
+    movieNameField = new JComboBox<>(movieList.toArray(new Movie[0]));
+    movieNameField.setRenderer(new MovieRenderer());
+    movieNameField.addActionListener(e -> {
+      Movie selectedMovie = (Movie) movieNameField.getSelectedItem();
+      if (selectedMovie != null && selectedMovie.getEndDate().compareTo("2024-06-01") <= 0) {
+        movieNameField.setSelectedIndex(-1);
+      }
+    });
   }
 
   private void setupCinemaField() {
@@ -99,7 +102,7 @@ public class ScheduleManagementWindow extends JFrame {
   }
 
   private void handleAddSchedule() {
-    String movieName = (String) movieNameField.getSelectedItem();
+    String movieName = ((Movie) movieNameField.getSelectedItem()).getTitle();
     String date = dateField.getText();
     String time = (String) timeField.getSelectedItem();
     String cinema = (String) cinemaField.getSelectedItem();
@@ -124,7 +127,7 @@ public class ScheduleManagementWindow extends JFrame {
     List<Movie> movieList = new ArrayList<>();
     movieList.add(new Movie("機密特務：阿蓋爾", "2024-01-31", "2024-03-11", "暢銷諜報小說作家捲入真實間諜行動。", "馬修范恩", "布萊絲·達拉斯·霍華, 山姆·洛克威爾, 亨利·卡維爾, 杜娃·黎波"));
     movieList.add(new Movie("窺探者", "2024-06-07", "2024-07-17", "藝術家被困愛爾蘭森林，遭神祕生物監視。", "M.奈沙馬蘭", "達科塔·芬妮, 喬吉娜·坎貝爾, 亞利斯泰·布拉姆"));
-    movieList.add(new Movie("邊緣禁地", "2024-08-09", "2024-09-18", "賞金獵人尋找失蹤的女孩，對抗外星怪物。", "伊萊·羅斯", "凱特·布蘭琪, 潔美·李·寇帝斯, 凱文·哈特, 傑克·布萊克"));
+    movieList.add(new Movie("邊緣禁地", "2024-08-09", "2024-09-18", "賞金獵人尋找失蹤的女孩，對抗外星怪物。", "伊萊·羅斯", "凱特·布蘭琪, 潔美·李·寇蒂斯, 凱文·哈特, 傑克·布萊克"));
     movieList.add(new Movie("死侍與金鋼狼", "2024-07-01", "2024-08-10", "死侍與金鋼狼聯手對抗新威脅。", "肖恩·李維", "萊恩·雷諾斯, 休·傑克曼"));
     movieList.add(new Movie("腦筋急轉彎2", "2024-06-07", "2024-07-17", "皮克斯經典動畫續集，情感角色再度回歸。", "凱爾西·曼恩", "艾米·波勒, 菲利斯·史密斯, 劉易·布萊克, 托尼·海爾, 麗莎·拉琵拉, 瑪雅·霍克, 阿尤·艾德維利, 阿黛兒·艾薩卓普洛斯, 保羅·華特·豪澤"));
     movieList.add(new Movie("摩托車騎士", "2024-06-07", "2024-07-17", "摩托車幫派的犯罪故事。", "傑夫·尼科爾斯", "奧斯汀·巴特勒, 湯姆·哈迪, 喬迪·科默, 邁克爾·珊農, 諾曼·瑞杜斯, 博伊德·霍布魯克"));
@@ -143,5 +146,75 @@ public class ScheduleManagementWindow extends JFrame {
     movieList.add(new Movie("內戰", "2024-04-01", "2024-05-11", "A24首部票房冠軍電影，講述內戰故事。", "大衛·羅威", "艾莉絲·恩格勒特, 亞當·崔佛"));
     movieList.add(new Movie("挑戰者", "2024-04-01", "2024-05-11", "Zendaya主演的運動劇情片。", "盧卡·瓜達尼諾", "Zendaya"));
     return movieList;
+  }
+
+  // 新增的 MovieRenderer 類
+  private class MovieRenderer extends DefaultListCellRenderer {
+    @Override
+    public Component getListCellRendererComponent(JList<?> list, Object value, int index,
+                                                  boolean isSelected, boolean cellHasFocus) {
+      super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+      if (value instanceof Movie) {
+        Movie movie = (Movie) value;
+        setText(movie.getTitle());
+        if (movie.getEndDate().compareTo("2024-06-01") <= 0) {
+          setForeground(Color.GRAY);
+        } else {
+          setForeground(list.getForeground());
+        }
+      }
+      return this;
+    }
+  }
+
+  // 修改 Movie 類，添加 getTitle() 方法
+  private class Movie {
+    private String title;
+    private String startDate;
+    private String endDate;
+    private String description;
+    private String director;
+    private String cast;
+
+    public Movie(String title, String startDate, String endDate, String description, String director, String cast) {
+      this.title = title;
+      this.startDate = startDate;
+      this.endDate = endDate;
+      this.description = description;
+      this.director = director;
+      this.cast = cast;
+    }
+
+    public String getTitle() {
+      return title;
+    }
+
+    public String getEndDate() {
+      return endDate;
+    }
+
+    @Override
+    public String toString() {
+      return title;
+    }
+  }
+
+  // 假設的 DatabaseManager 類
+  private class DatabaseManager {
+    public boolean getUserFeature(String user, String feature) throws SQLException {
+      // 模擬從資料庫獲取用戶特性
+      return true;
+    }
+
+    public void addSchedule(String movieName, String date, String time, String cinema) {
+      // 模擬將場次添加到資料庫
+      System.out.println("新增場次: " + movieName + ", 日期: " + date + ", 時間: " + time + ", 影城: " + cinema);
+    }
+  }
+
+  public static void main(String[] args) {
+    SwingUtilities.invokeLater(() -> {
+      new ScheduleManagementWindow("testUser").setVisible(true);
+    });
   }
 }

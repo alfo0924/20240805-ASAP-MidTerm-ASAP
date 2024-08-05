@@ -7,14 +7,16 @@ public class Movie {
     private String description;
     private String director;
     private String mainActors;
+    private int id;
 
-    public Movie(String title, String releaseDate, String endDate, String description, String director, String mainActors) {
+    public Movie(int i, String title, String releaseDate, String endDate, String description, String director, String mainActors) {
         this.title = title;
         this.releaseDate = releaseDate;
         this.endDate = endDate;
         this.description = description;
         this.director = director;
         this.mainActors = mainActors;
+        this.id = id;
     }
 
     // Getters and setters
@@ -40,5 +42,9 @@ public class Movie {
 
     public String getMainActors() {
         return mainActors;
+    }
+
+    public int getId() {
+        return id;
     }
 }
