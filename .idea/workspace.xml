@@ -4,37 +4,70 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1610266-8bcd-4f8a-b098-7432be71a8c3" name="Changes" comment="v1.66  cnp fix details">
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_8_5__06_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_8_5__06_08__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieTableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RESET_MODE" value="MIXED" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2kEEGlrcMXFW1ZOGFrlDqth0EM5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LoginGUI.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.ScheduleManagementWindow.executor": "Run",
-    "git-widget-placeholder": "master",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.LoginGUI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;login&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chias\IdeaProjects\20240805-ASAP-MidTerm-ASAP\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
       <option name="appServicePlanResourceGroup" />
-      <option name="appSettingsKey" value="240a8fac-6af1-4175-97e0-6641084d31dd" />
+      <option name="appSettingsKey" value="cd094b81-226c-402f-9baf-cffa7f348ec6" />
       <option name="artifact" />
       <option name="debugOptions" />
       <option name="deployment" />
@@ -61,84 +94,72 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="v1.58  cnp Fix add list movie data">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="" />
+      <created>1722840244224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722840244224</updated>
+      <workItem from="1722840245290" duration="3000" />
+      <workItem from="1722841179150" duration="317000" />
+      <workItem from="1722841503884" duration="4720000" />
+      <workItem from="1722846424980" duration="2394000" />
+      <workItem from="1722859385790" duration="4722000" />
+      <workItem from="1722877646388" duration="26000" />
+    </task>
+    <task id="LOCAL-00001" summary="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。">
       <option name="closed" value="true" />
-      <created>1722865308804</created>
+      <created>1722850205675</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1722865308804</updated>
+      <updated>1722850205675</updated>
     </task>
-    <task id="LOCAL-00002" summary="v1.6  cnp Fix add dropdown list movies at schedule">
+    <task id="LOCAL-00002" summary="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。">
       <option name="closed" value="true" />
-      <created>1722865812216</created>
+      <created>1722858175428</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1722865812216</updated>
+      <updated>1722858175428</updated>
     </task>
-    <task id="LOCAL-00003" summary="v1.61  cnp Fix add dropdown list movies at schedule">
+    <task id="LOCAL-00003" summary="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。">
       <option name="closed" value="true" />
-      <created>1722870625482</created>
+      <created>1722858534564</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1722870625482</updated>
+      <updated>1722858534564</updated>
     </task>
-    <task id="LOCAL-00004" summary="v1.62  cnp Fix add dropdown list movies at schedule">
+    <task id="LOCAL-00004" summary="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。">
       <option name="closed" value="true" />
-      <created>1722870701842</created>
+      <created>1722865363538</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1722870701842</updated>
+      <updated>1722865363538</updated>
     </task>
-    <task id="LOCAL-00005" summary="v1.63  cnp Fix add dropdown list movies at schedule">
-      <option name="closed" value="true" />
-      <created>1722871058032</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1722871058032</updated>
-    </task>
-    <task id="LOCAL-00006" summary="v1.64  cnp Fix add dropdown list movies at schedule">
-      <option name="closed" value="true" />
-      <created>1722871527504</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1722871527504</updated>
-    </task>
-    <task id="LOCAL-00007" summary="v1.65  cnp fix details">
-      <option name="closed" value="true" />
-      <created>1722875094180</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1722875094180</updated>
-    </task>
-    <task id="LOCAL-00008" summary="v1.66  cnp fix details">
-      <option name="closed" value="true" />
-      <created>1722875509065</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1722875509065</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v1.55  cnp Fix add details" />
-    <MESSAGE value="v1.58  cnp Fix add list movie data" />
-    <MESSAGE value="v1.6  cnp Fix add dropdown list movies at schedule" />
-    <MESSAGE value="v1.61  cnp Fix add dropdown list movies at schedule" />
-    <MESSAGE value="v1.62  cnp Fix add dropdown list movies at schedule" />
-    <MESSAGE value="v1.63  cnp Fix add dropdown list movies at schedule" />
-    <MESSAGE value="v1.64  cnp Fix add dropdown list movies at schedule" />
-    <MESSAGE value="v1.65  cnp fix details" />
-    <MESSAGE value="v1.66  cnp fix details" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.66  cnp fix details" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。" />
+    <MESSAGE value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
+    <MESSAGE value="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。" />
+    <option name="LAST_COMMIT_MESSAGE" value="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。" />
   </component>
 </project>

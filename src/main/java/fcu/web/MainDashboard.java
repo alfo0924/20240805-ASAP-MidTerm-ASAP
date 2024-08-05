@@ -68,8 +68,8 @@ public class MainDashboard extends JFrame {
     playbackManagementButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        // 打開播放管理視窗或功能
-        JOptionPane.showMessageDialog(null, "播放管理");
+        PlaybackManagementWindow window = new PlaybackManagementWindow(currentUser);
+        window.setVisible(true);
       }
     });
 
