@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="v1.67  cnp fix details">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9d9197a-2a7b-4077-a372-4fdeace38eb1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9d9197a-2a7b-4077-a372-4fdeace38eb1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.db" beforeDir="false" afterPath="$PROJECT_DIR$/user.db" afterDir="false" />
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722865363538</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現">
+      <option name="closed" value="true" />
+      <created>1722879430725</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722879430725</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +168,7 @@
     <MESSAGE value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
     <MESSAGE value="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。" />
     <MESSAGE value="v1.67  cnp fix details" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.67  cnp fix details" />
+    <MESSAGE value="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現" />
   </component>
 </project>
