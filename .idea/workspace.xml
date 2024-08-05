@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。" />
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/AccountManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/AccountManagementWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/UserTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/UserTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.db" beforeDir="false" afterPath="$PROJECT_DIR$/user.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

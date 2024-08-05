@@ -86,6 +86,34 @@ public class DatabaseManager {
     }
   }
 
+  public boolean getUserFeature(String userName, String featureName) throws SQLException {
+    String sql = "SELECT " + featureName + " FROM user_data WHERE user_name = ?";
+    try (Connection conn = DriverManager.getConnection(DB_URL);
+        PreparedStatement pstmt = conn.prepareStatement(sql)) {
+      pstmt.setString(1, userName);
+      try (ResultSet rs = pstmt.executeQuery()) {
+        if (rs.next()) {
+          return rs.getBoolean(featureName);
+        }
+      }
+    }
+    return false; // 如果用戶不存在或發生錯誤，默認返回 false
+  }
+
+  public boolean getUserFeature1(String userName) throws SQLException {
+    String sql = "SELECT feature1 FROM user_data WHERE user_name = ?";
+    try (Connection conn = DriverManager.getConnection(DB_URL);
+        PreparedStatement pstmt = conn.prepareStatement(sql)) {
+      pstmt.setString(1, userName);
+      try (ResultSet rs = pstmt.executeQuery()) {
+        if (rs.next()) {
+          return rs.getBoolean("feature1");
+        }
+      }
+    }
+    return false;
+  }
+
   public void updateUserFeatures(String userName, boolean active, boolean feature1, boolean feature2, boolean feature3) throws SQLException {
     String updateSQL = "UPDATE user_data SET active = ?, feature1 = ?, feature2 = ?, feature3 = ? WHERE user_name = ?";
     try (Connection conn = DriverManager.getConnection(DB_URL);
@@ -97,5 +125,8 @@ public class DatabaseManager {
       pstmt.setString(5, userName);
       pstmt.executeUpdate();
     }
+  }
+
+  public void addSchedule(String movieName, String date, String time, String cinema) {
   }
 }

@@ -59,8 +59,8 @@ public class MainDashboard extends JFrame {
     scheduleManagementButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        // 打開場次管理視窗或功能
-        JOptionPane.showMessageDialog(null, "場次管理");
+        ScheduleManagementWindow window = new ScheduleManagementWindow(currentUser);
+        window.setVisible(true);
       }
     });
 

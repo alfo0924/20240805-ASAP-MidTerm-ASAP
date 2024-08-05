@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserTableModel extends AbstractTableModel {
-  private final String[] columnNames = {"使用者名稱", "啟用", "功能1", "功能2", "功能3"};
+  private final String[] columnNames = {"使用者名稱", "啟用", "老虎城", "大遠百", "新時代"};
   private final List<User> users;
 
   public UserTableModel() {
     users = new ArrayList<>();
   }
 
-  public void addUser(String userName, boolean isActive) {
-    users.add(new User(userName, isActive, false, false, false));
+  public void addUser(String userName, boolean isActive, boolean feature1, boolean feature2, boolean feature3) {
+    users.add(new User(userName, isActive, feature1, feature2, feature3));
     fireTableRowsInserted(users.size() - 1, users.size() - 1);
   }
 

@@ -2,14 +2,14 @@ package fcu.web;
 
 public class User {
   private String userName;
-  private boolean active;
+  private boolean isActive;
   private boolean feature1;
   private boolean feature2;
   private boolean feature3;
 
-  public User(String userName, boolean active, boolean feature1, boolean feature2, boolean feature3) {
+  public User(String userName, boolean isActive, boolean feature1, boolean feature2, boolean feature3) {
     this.userName = userName;
-    this.active = active;
+    this.isActive = isActive;
     this.feature1 = feature1;
     this.feature2 = feature2;
     this.feature3 = feature3;
@@ -19,12 +19,16 @@ public class User {
     return userName;
   }
 
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
+
   public boolean isActive() {
-    return active;
+    return isActive;
   }
 
   public void setActive(boolean active) {
-    this.active = active;
+    isActive = active;
   }
 
   public boolean isFeature1() {
