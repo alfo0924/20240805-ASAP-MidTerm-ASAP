@@ -156,17 +156,26 @@ public class AccountManagementWindow extends JFrame {
   private void refreshUserTable() {
     tableModel.clear();
     try (Connection conn = DriverManager.getConnection(dbManager.DB_URL);
-         Statement stmt = conn.createStatement();
-         ResultSet rs = stmt.executeQuery("SELECT user_name, active FROM user_data")) {
+
+        Statement stmt = conn.createStatement();
+        // 擴展查詢以包含功能欄位
+        ResultSet rs = stmt.executeQuery("SELECT user_name, active, feature1, feature2, feature3 FROM user_data")) {
+
       while (rs.next()) {
         String userName = rs.getString("user_name");
         boolean isActive = rs.getBoolean("active");
-        tableModel.addUser(userName, isActive);
+        boolean feature1 = rs.getBoolean("feature1");
+        boolean feature2 = rs.getBoolean("feature2");
+        boolean feature3 = rs.getBoolean("feature3");
+
+        // 確保傳遞所有需要的參數
+        tableModel.addUser(userName, isActive, feature1, feature2, feature3);
       }
     } catch (SQLException e) {
       e.printStackTrace();
     }
   }
+
 
   private void handleAddUser() {
     String userName = userNameField.getText();
