@@ -167,8 +167,18 @@ public class MovieManagementWindow extends JFrame {
     private void handleAddMovie() {
         String title = titleField.getText();
         String director = directorField.getText();
-        int year = Integer.parseInt(yearField.getText());
+        String yearText = yearField.getText();
         String genre = genreField.getText();
+
+        // 檢查年份是否為有效的整數
+        int year;
+        try {
+            year = Integer.parseInt(yearText);
+        } catch (NumberFormatException e) {
+            messageLabel.setText("年份必須是有效的整數！");
+            return;
+        }
+
         if (dbManager.insertMovie(title, director, year, genre)) {
             messageLabel.setText("電影新增成功！");
             refreshMovieTable();
