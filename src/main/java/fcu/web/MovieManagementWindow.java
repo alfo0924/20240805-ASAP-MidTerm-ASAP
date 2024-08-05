@@ -16,9 +16,11 @@ public class MovieManagementWindow extends JFrame {
     private JTextField yearField;
     private JTextField genreField;
     private JLabel messageLabel;
+    private JFrame mainDashboard;
 
-    public MovieManagementWindow(DatabaseManager dbManager) {
+    public MovieManagementWindow(DatabaseManager dbManager, JFrame mainDashboard) {
         this.dbManager = dbManager;
+        this.mainDashboard = mainDashboard;
         setTitle("電影管理");
         setSize(800, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -77,9 +79,19 @@ public class MovieManagementWindow extends JFrame {
         constraints.gridy = 5;
         inputPanel.add(deleteMovieButton, constraints);
 
-        messageLabel = new JLabel();
+        JButton queryMovieButton = new JButton("查詢電影");
         constraints.gridx = 1;
         constraints.gridy = 6;
+        inputPanel.add(queryMovieButton, constraints);
+
+        JButton backButton = new JButton("返回");
+        constraints.gridx = 1;
+        constraints.gridy = 7;
+        inputPanel.add(backButton, constraints);
+
+        messageLabel = new JLabel();
+        constraints.gridx = 1;
+        constraints.gridy = 8;
         inputPanel.add(messageLabel, constraints);
 
         add(inputPanel, BorderLayout.SOUTH);
@@ -95,6 +107,21 @@ public class MovieManagementWindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 handleDeleteMovie();
+            }
+        });
+
+        queryMovieButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                refreshMovieTable();
+            }
+        });
+
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainDashboard.setVisible(true);
+                dispose();
             }
         });
     }

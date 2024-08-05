@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="v1.51  add movie management prototype">
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/DatabaseManager.java" afterDir="false" />
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="v1.52  merge movie management">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/AccountManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/AccountManagementWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.db" beforeDir="false" afterPath="$PROJECT_DIR$/user.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AccountManagementWindow.executor": "Run",
     "Application.LoginGUI.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MainDashboard.executor": "Run",
@@ -121,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722855913834</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v1.52  merge movie management">
+      <option name="closed" value="true" />
+      <created>1722856232529</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722856232529</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +151,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1.5  add movie management prototype" />
     <MESSAGE value="v1.51  add movie management prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.51  add movie management prototype" />
+    <MESSAGE value="v1.52  merge movie management" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.52  merge movie management" />
   </component>
 </project>

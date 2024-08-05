@@ -15,12 +15,15 @@ public class AccountManagementWindow extends JFrame {
   private JButton cancelAccountButton;
   private JButton restoreAccountButton;
   private JButton confirmChangesButton;
+  private JButton backButton;
   private JTextField userNameField;
   private JPasswordField passwordField;
   private JLabel messageLabel;
+  private JFrame mainDashboard;
 
-  public AccountManagementWindow() {
-    dbManager = new DatabaseManager();
+  public AccountManagementWindow(DatabaseManager dbManager, JFrame mainDashboard) {
+    this.dbManager = dbManager;
+    this.mainDashboard = mainDashboard;
 
     setTitle("帳號管理");
     setSize(800, 500);
@@ -91,10 +94,16 @@ public class AccountManagementWindow extends JFrame {
     constraints.gridy = 6;
     inputPanel.add(confirmChangesButton, constraints);
 
+    // 返回按鈕
+    backButton = new JButton("返回");
+    constraints.gridx = 1;
+    constraints.gridy = 7;
+    inputPanel.add(backButton, constraints);
+
     // 訊息標籤
     messageLabel = new JLabel();
     constraints.gridx = 1;
-    constraints.gridy = 7;
+    constraints.gridy = 8;
     inputPanel.add(messageLabel, constraints);
 
     add(inputPanel, BorderLayout.SOUTH);
@@ -134,13 +143,21 @@ public class AccountManagementWindow extends JFrame {
         handleConfirmChanges();
       }
     });
+
+    backButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        mainDashboard.setVisible(true);
+        dispose();
+      }
+    });
   }
 
   private void refreshUserTable() {
     tableModel.clear();
     try (Connection conn = DriverManager.getConnection(dbManager.DB_URL);
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT user_name, active FROM user_data")) {
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery("SELECT user_name, active FROM user_data")) {
       while (rs.next()) {
         String userName = rs.getString("user_name");
         boolean isActive = rs.getBoolean("active");
@@ -230,7 +247,7 @@ public class AccountManagementWindow extends JFrame {
     SwingUtilities.invokeLater(new Runnable() {
       @Override
       public void run() {
-        AccountManagementWindow window = new AccountManagementWindow();
+        AccountManagementWindow window = new AccountManagementWindow(new DatabaseManager(), new JFrame());
         window.setVisible(true);
       }
     });

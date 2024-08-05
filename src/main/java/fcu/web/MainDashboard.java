@@ -41,7 +41,8 @@ public class MainDashboard extends JFrame {
       @Override
       public void actionPerformed(ActionEvent e) {
         if ("Admin".equals(currentUser)) {
-          new AccountManagementWindow().setVisible(true);
+          new AccountManagementWindow(dbManager, MainDashboard.this).setVisible(true);
+          setVisible(false);
         } else {
           JOptionPane.showMessageDialog(null, "您沒有權限進行此操作！");
         }
@@ -51,7 +52,8 @@ public class MainDashboard extends JFrame {
     movieManagementButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        new MovieManagementWindow(dbManager).setVisible(true);
+        new MovieManagementWindow(dbManager, MainDashboard.this).setVisible(true);
+        setVisible(false);
       }
     });
 
