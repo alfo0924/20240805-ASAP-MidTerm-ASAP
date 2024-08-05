@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/AccountManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/AccountManagementWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/UserTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/UserTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.db" beforeDir="false" afterPath="$PROJECT_DIR$/user.db" afterDir="false" />
-    </list>
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722850205675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。">
+      <option name="closed" value="true" />
+      <created>1722858175428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722858175428</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。" />
+    <MESSAGE value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
+    <option name="LAST_COMMIT_MESSAGE" value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
   </component>
 </project>
