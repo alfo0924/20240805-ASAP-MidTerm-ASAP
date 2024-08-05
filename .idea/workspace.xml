@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1610266-8bcd-4f8a-b098-7432be71a8c3" name="Changes" comment="v1.62  cnp Fix add dropdown list movies at schedule">
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" afterDir="false" />
-    </list>
+    <list default="true" id="a1610266-8bcd-4f8a-b098-7432be71a8c3" name="Changes" comment="v1.64  cnp Fix add dropdown list movies at schedule" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +89,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722870701842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="v1.63  cnp Fix add dropdown list movies at schedule">
+      <option name="closed" value="true" />
+      <created>1722871058032</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722871058032</updated>
+    </task>
+    <task id="LOCAL-00006" summary="v1.64  cnp Fix add dropdown list movies at schedule">
+      <option name="closed" value="true" />
+      <created>1722871527504</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722871527504</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -100,6 +114,8 @@
     <MESSAGE value="v1.6  cnp Fix add dropdown list movies at schedule" />
     <MESSAGE value="v1.61  cnp Fix add dropdown list movies at schedule" />
     <MESSAGE value="v1.62  cnp Fix add dropdown list movies at schedule" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.62  cnp Fix add dropdown list movies at schedule" />
+    <MESSAGE value="v1.63  cnp Fix add dropdown list movies at schedule" />
+    <MESSAGE value="v1.64  cnp Fix add dropdown list movies at schedule" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.64  cnp Fix add dropdown list movies at schedule" />
   </component>
 </project>
