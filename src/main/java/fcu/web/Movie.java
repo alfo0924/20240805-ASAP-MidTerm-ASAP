@@ -1,37 +1,44 @@
 package fcu.web;
 
 public class Movie {
-    private int id;
     private String title;
+    private String releaseDate;
+    private String endDate;
+    private String description;
     private String director;
-    private int year;
-    private String genre;
+    private String mainActors;
 
-    public Movie(int id, String title, String director, int year, String genre) {
-        this.id = id;
+    public Movie(String title, String releaseDate, String endDate, String description, String director, String mainActors) {
         this.title = title;
+        this.releaseDate = releaseDate;
+        this.endDate = endDate;
+        this.description = description;
         this.director = director;
-        this.year = year;
-        this.genre = genre;
+        this.mainActors = mainActors;
     }
 
-    public int getId() {
-        return id;
-    }
-
+    // Getters and setters
     public String getTitle() {
         return title;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public String getDirector() {
         return director;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public String getGenre() {
-        return genre;
+    public String getMainActors() {
+        return mainActors;
     }
 }
