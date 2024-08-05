@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +20,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -36,6 +34,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
@@ -50,13 +49,9 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\chias\IdeaProjects\20240805-ASAP-MidTerm-ASAP\src" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
@@ -92,8 +87,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -106,18 +101,16 @@
       <option name="presentableId" value="Default" />
       <updated>1722840244224</updated>
       <workItem from="1722840245290" duration="3000" />
-      <workItem from="1722841179150" duration="317000" />
-      <workItem from="1722841503884" duration="4720000" />
-      <workItem from="1722846424980" duration="2394000" />
     </task>
-    <task id="LOCAL-00001" summary="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。">
+    <task id="LOCAL-00001" summary="v1.5  add movie management prototype">
       <option name="closed" value="true" />
-      <created>1722850205675</created>
+      <created>1722854181421</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1722850205675</updated>
+      <updated>1722854181421</updated>
     </task>
+
     <task id="LOCAL-00002" summary="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。">
       <option name="closed" value="true" />
       <created>1722858175428</created>
@@ -127,15 +120,18 @@
       <updated>1722858175428</updated>
     </task>
     <option name="localTasksCounter" value="3" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。" />
     <MESSAGE value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
     <option name="LAST_COMMIT_MESSAGE" value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
+
   </component>
 </project>
