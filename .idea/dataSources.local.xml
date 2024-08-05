@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-241.17011.79">
+  <component name="dataSourceStorageLocal" created-in="IU-241.14494.240">
     <data-source name="user" uuid="f9d9197a-2a7b-4077-a372-4fdeace38eb1">
       <database-info product="SQLite" version="3.45.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.45.1.0" dbms="SQLITE" exact-version="3.45.1" exact-driver-version="3.45">
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -12,6 +12,11 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="your_database@localhost" uuid="2230ecfe-1cd6-4d10-8246-8666badf4e5a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>your_username</user-name>
+      <schema-mapping />
     </data-source>
   </component>
 </project>

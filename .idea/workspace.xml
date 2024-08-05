@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9d9197a-2a7b-4077-a372-4fdeace38eb1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9d9197a-2a7b-4077-a372-4fdeace38eb1.xml" afterDir="false" />
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_8_5__06_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_8_5__06_08__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.db" beforeDir="false" afterPath="$PROJECT_DIR$/user.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,8 @@
       <workItem from="1722841179150" duration="317000" />
       <workItem from="1722841503884" duration="4720000" />
       <workItem from="1722846424980" duration="2394000" />
-      <workItem from="1722859385790" duration="4650000" />
+      <workItem from="1722859385790" duration="4722000" />
+      <workItem from="1722877646388" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。">
       <option name="closed" value="true" />
@@ -141,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722858534564</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。">
+      <option name="closed" value="true" />
+      <created>1722865363538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722865363538</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +159,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.使用者登入介面。&#10;2.主頁面。&#10;3.帳號管理與權限設定完成。" />
     <MESSAGE value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
-    <option name="LAST_COMMIT_MESSAGE" value="實作場次管理頁面與權限設定&#10;說明:&#10;1.可在帳號管理設定使用者可更新的影城，欲於場次管理連動該權限。&#10;2.場次管理的電影資料來源尚未連結。&#10;3.場次管理電影資料儲存方式尚未完全實作。" />
+    <MESSAGE value="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。" />
+    <option name="LAST_COMMIT_MESSAGE" value="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。" />
   </component>
 </project>
