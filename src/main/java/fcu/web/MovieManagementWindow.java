@@ -17,8 +17,8 @@ public class MovieManagementWindow extends JFrame {
     private JTextField genreField;
     private JLabel messageLabel;
 
-    public MovieManagementWindow() {
-        dbManager = new DatabaseManager();
+    public MovieManagementWindow(DatabaseManager dbManager) {
+        this.dbManager = dbManager;
         setTitle("電影管理");
         setSize(800, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -143,14 +143,5 @@ public class MovieManagementWindow extends JFrame {
         } else {
             messageLabel.setText("請選擇一部電影！");
         }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new MovieManagementWindow().setVisible(true);
-            }
-        });
     }
 }

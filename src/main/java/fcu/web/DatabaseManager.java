@@ -6,6 +6,12 @@ public class DatabaseManager {
   public final String DB_URL = "jdbc:sqlite:user.db";
 
   public DatabaseManager() {
+    try {
+      // 加載JDBC驅動程式
+      Class.forName("org.sqlite.JDBC");
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
+    }
     createTablesIfNotExists();
   }
 

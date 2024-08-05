@@ -51,8 +51,7 @@ public class MainDashboard extends JFrame {
     movieManagementButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        // 打開影片管理視窗或功能
-        JOptionPane.showMessageDialog(null, "影片管理");
+        new MovieManagementWindow(dbManager).setVisible(true);
       }
     });
 
@@ -77,6 +76,15 @@ public class MainDashboard extends JFrame {
       public void actionPerformed(ActionEvent e) {
         // 打開統計報表視窗或功能
         JOptionPane.showMessageDialog(null, "統計報表");
+      }
+    });
+  }
+
+  public static void main(String[] args) {
+    SwingUtilities.invokeLater(new Runnable() {
+      @Override
+      public void run() {
+        new MainDashboard("使用者").setVisible(true);
       }
     });
   }
