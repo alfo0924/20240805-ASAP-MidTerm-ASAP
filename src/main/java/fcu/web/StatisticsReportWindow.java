@@ -2,14 +2,18 @@ package fcu.web;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 public class StatisticsReportWindow extends JFrame {
     private JTextArea reportArea;
     private List<Movie> movieList;
+    private JFrame parentFrame;
 
-    public StatisticsReportWindow(List<Movie> movieList) {
+    public StatisticsReportWindow(List<Movie> movieList, JFrame parentFrame) {
         this.movieList = movieList;
+        this.parentFrame = parentFrame;
         setTitle("統計報表");
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -19,8 +23,21 @@ public class StatisticsReportWindow extends JFrame {
         reportArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(reportArea);
 
+        JButton backButton = new JButton("返回");
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                parentFrame.setVisible(true);
+                dispose();
+            }
+        });
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(backButton);
+
         setLayout(new BorderLayout());
         add(scrollPane, BorderLayout.CENTER);
+        add(buttonPanel, BorderLayout.SOUTH);
 
         generateReport();
     }

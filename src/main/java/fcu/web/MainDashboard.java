@@ -66,24 +66,24 @@ public class MainDashboard extends JFrame {
     scheduleManagementButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        ScheduleManagementWindow window = new ScheduleManagementWindow(currentUser);
-        window.setVisible(true);
+        new ScheduleManagementWindow(currentUser, MainDashboard.this).setVisible(true);
+        setVisible(false);
       }
     });
 
     playbackManagementButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        PlaybackManagementWindow window = new PlaybackManagementWindow(currentUser);
-        window.setVisible(true);
+        new PlaybackManagementWindow(currentUser, MainDashboard.this).setVisible(true);
+        setVisible(false);
       }
     });
 
     reportButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        StatisticsReportWindow window = new StatisticsReportWindow(movieList);
-        window.setVisible(true);
+        new StatisticsReportWindow(movieList, MainDashboard.this).setVisible(true);
+        setVisible(false);
       }
     });
   }
@@ -110,5 +110,11 @@ public class MainDashboard extends JFrame {
     movieList.add(new Movie(18, "凶兆：起源", "2024-04-01", "2024-05-11", "《凶兆》前傳，探索惡魔的起源。", "安德烈·艾芙道斯基", "比爾·斯卡斯加德, 安雅·泰勒-喬伊"));
     movieList.add(new Movie(19, "內戰", "2024-04-01", "2024-05-11", "A24首部票房冠軍電影，講述內戰故事。", "大衛·羅威", "艾莉絲·恩格勒特, 亞當·崔佛"));
     movieList.add(new Movie(20, "挑戰者", "2024-04-01", "2024-05-11", "Zendaya主演的運動劇情片。", "盧卡·瓜達尼諾", "Zendaya"));
+  }
+
+  public static void main(String[] args) {
+    SwingUtilities.invokeLater(() -> {
+      new MainDashboard("testUser").setVisible(true);
+    });
   }
 }

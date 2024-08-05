@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" afterDir="false" />
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.75 統計報表:&#10;新增統計報表介面">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MainDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/ScheduleManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/ScheduleManagementWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -44,6 +47,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.LoginGUI.executor": "Run",
+    "Application.ScheduleManagementWindow.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -156,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722879430725</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1.75 統計報表:&#10;新增統計報表介面">
+      <option name="closed" value="true" />
+      <created>1722879904699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722879904699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +181,7 @@
     <MESSAGE value="實作播放清單&#10;說明:&#10;1.僅先以測試資料實作。&#10;2.排序與呈現方式須依後續連料結果調整。&#10;3.有請chat設定權限，權限同場次管理但尚未驗證。" />
     <MESSAGE value="v1.67  cnp fix details" />
     <MESSAGE value="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.75 撥放清單:&#10;每當按下撥放清單電影就會隨機出現" />
+    <MESSAGE value="1.75 統計報表:&#10;新增統計報表介面" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.75 統計報表:&#10;新增統計報表介面" />
   </component>
 </project>

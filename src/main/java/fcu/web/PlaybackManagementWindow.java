@@ -2,6 +2,8 @@ package fcu.web;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,9 +12,11 @@ public class PlaybackManagementWindow extends JFrame {
   private JTextArea playbackArea;
   private String currentUser;
   private List<Movie> movieList;
+  private JFrame parentFrame;
 
-  public PlaybackManagementWindow(String currentUser) {
+  public PlaybackManagementWindow(String currentUser, JFrame parentFrame) {
     this.currentUser = currentUser;
+    this.parentFrame = parentFrame;
     setTitle("播放管理");
     setSize(500, 400);
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -22,8 +26,21 @@ public class PlaybackManagementWindow extends JFrame {
     playbackArea.setEditable(false);
     JScrollPane scrollPane = new JScrollPane(playbackArea);
 
+    JButton backButton = new JButton("返回");
+    backButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        parentFrame.setVisible(true);
+        dispose();
+      }
+    });
+
+    JPanel buttonPanel = new JPanel();
+    buttonPanel.add(backButton);
+
     setLayout(new BorderLayout());
     add(scrollPane, BorderLayout.CENTER);
+    add(buttonPanel, BorderLayout.SOUTH);
 
     initializeMovieList();
     setupPlaybackList();

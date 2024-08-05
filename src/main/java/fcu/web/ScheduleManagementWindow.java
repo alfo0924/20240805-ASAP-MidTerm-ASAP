@@ -17,17 +17,19 @@ public class ScheduleManagementWindow extends JFrame {
   private JComboBox<String> cinemaField;
   private DatabaseManager dbManager;
   private String currentUser;
+  private JFrame mainDashboard;
 
-  public ScheduleManagementWindow(String userName) {
+  public ScheduleManagementWindow(String userName, JFrame mainDashboard) {
     dbManager = new DatabaseManager();
     currentUser = userName;
+    this.mainDashboard = mainDashboard;
 
     setTitle("場次管理");
     setSize(400, 300);
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setLocationRelativeTo(null);
 
-    setLayout(new GridLayout(5, 2, 10, 10));
+    setLayout(new GridLayout(6, 2, 10, 10)); // 增加一行以容納返回按鈕
 
     setupUIComponents();
   }
@@ -49,6 +51,9 @@ public class ScheduleManagementWindow extends JFrame {
     JButton addButton = new JButton("新增場次");
     addButton.addActionListener(e -> handleAddSchedule());
 
+    JButton backButton = new JButton("返回");
+    backButton.addActionListener(e -> handleBack());
+
     add(movieNameLabel);
     add(movieNameField);
     add(dateLabel);
@@ -59,6 +64,8 @@ public class ScheduleManagementWindow extends JFrame {
     add(cinemaField);
     add(new JLabel());
     add(addButton);
+    add(new JLabel()); // 空白占位符
+    add(backButton);
   }
 
   private void setupMovieNameField() {
@@ -197,9 +204,21 @@ public class ScheduleManagementWindow extends JFrame {
     }
   }
 
+  private void handleBack() {
+    mainDashboard.setVisible(true);
+    dispose();
+  }
+
   public static void main(String[] args) {
+    JFrame mainDashboard = new JFrame("Main Dashboard");
+    mainDashboard.setSize(800, 600);
+    mainDashboard.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    mainDashboard.setLocationRelativeTo(null);
+    mainDashboard.setVisible(true);
+
     SwingUtilities.invokeLater(() -> {
-      new ScheduleManagementWindow("testUser").setVisible(true);
+      new ScheduleManagementWindow("testUser", mainDashboard).setVisible(true);
+      mainDashboard.setVisible(false);
     });
   }
 }
