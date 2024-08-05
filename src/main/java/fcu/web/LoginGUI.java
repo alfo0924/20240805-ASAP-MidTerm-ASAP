@@ -84,7 +84,6 @@ public class LoginGUI extends JFrame {
       messageLabel.setText("帳號或密碼錯誤！");
     }
   }
-
   public static void main(String[] args) {
     SwingUtilities.invokeLater(new Runnable() {
       @Override
