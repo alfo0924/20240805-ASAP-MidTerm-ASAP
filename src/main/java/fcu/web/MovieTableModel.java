@@ -57,4 +57,7 @@ public class MovieTableModel extends AbstractTableModel {
     public String getColumnName(int column) {
         return columnNames[column];
     }
+
+    public void removeRow(int selectedRow) {
+    }
 }

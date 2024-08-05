@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1610266-8bcd-4f8a-b098-7432be71a8c3" name="Changes" comment="v1.65  cnp fix details">
+    <list default="true" id="a1610266-8bcd-4f8a-b098-7432be71a8c3" name="Changes" comment="v1.66  cnp fix details">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieManagementWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/MovieTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/MovieTableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722875094180</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="v1.66  cnp fix details">
+      <option name="closed" value="true" />
+      <created>1722875509065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722875509065</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +138,7 @@
     <MESSAGE value="v1.63  cnp Fix add dropdown list movies at schedule" />
     <MESSAGE value="v1.64  cnp Fix add dropdown list movies at schedule" />
     <MESSAGE value="v1.65  cnp fix details" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.65  cnp fix details" />
+    <MESSAGE value="v1.66  cnp fix details" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.66  cnp fix details" />
   </component>
 </project>

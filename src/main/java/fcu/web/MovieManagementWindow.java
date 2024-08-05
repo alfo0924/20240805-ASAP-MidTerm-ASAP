@@ -170,7 +170,6 @@ public class MovieManagementWindow extends JFrame {
         String yearText = yearField.getText();
         String genre = genreField.getText();
 
-        // 檢查年份是否為有效的整數
         int year;
         try {
             year = Integer.parseInt(yearText);
@@ -190,7 +189,6 @@ public class MovieManagementWindow extends JFrame {
     private void handleDeleteMovie() {
         int selectedRow = movieTable.getSelectedRow();
         if (selectedRow >= 0) {
-            // 確保第一列是電影的 ID 並且是 Integer 類型
             Object idValue = movieTable.getValueAt(selectedRow, 0);
             if (idValue instanceof Integer) {
                 int id = (Integer) idValue;
