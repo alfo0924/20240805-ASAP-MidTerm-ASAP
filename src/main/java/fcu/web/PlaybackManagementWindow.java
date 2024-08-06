@@ -4,21 +4,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Random;
 
 public class PlaybackManagementWindow extends JFrame {
   private JTextArea playbackArea;
   private String currentUser;
   private List<Movie> movieList;
   private JFrame parentFrame;
+  private final String[] CINEMAS = {"老虎城", "大遠百", "新時代"};
+  private final String[] TIME_SLOTS = {"10:00-12:00", "12:30-14:30", "15:00-17:00", "17:30-19:30", "20:00-22:00"};
 
   public PlaybackManagementWindow(String currentUser, JFrame parentFrame) {
     this.currentUser = currentUser;
     this.parentFrame = parentFrame;
     setTitle("播放管理");
-    setSize(500, 400);
+    setSize(800, 600);
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setLocationRelativeTo(null);
 
@@ -71,32 +72,46 @@ public class PlaybackManagementWindow extends JFrame {
   }
 
   private void setupPlaybackList() {
-    List<String> schedules = getSchedulesByDateAndCinema("2024-08-05", currentUser);
+    Map<String, Map<String, Movie>> schedules = generateSchedules();
     StringBuilder sb = new StringBuilder();
 
-    Random random = new Random();
-    for (String schedule : schedules) {
-      Movie randomMovie = movieList.get(random.nextInt(movieList.size()));
-      sb.append(schedule).append(" - ").append(randomMovie.getTitle()).append("\n");
+    for (String cinema : CINEMAS) {
+      if ("Admin".equals(currentUser) || cinema.equals(currentUser)) {
+        sb.append(cinema).append(":\n");
+        Map<String, Movie> cinemaSchedule = schedules.get(cinema);
+        for (String timeSlot : TIME_SLOTS) {
+          Movie movie = cinemaSchedule.get(timeSlot);
+          sb.append(timeSlot).append(" - ").append(movie.getTitle()).append("\n");
+        }
+        sb.append("\n");
+      }
     }
 
     playbackArea.setText(sb.toString());
   }
 
-  private List<String> getSchedulesByDateAndCinema(String date, String userName) {
-    List<String> schedules = new ArrayList<>();
+  private Map<String, Map<String, Movie>> generateSchedules() {
+    Map<String, Map<String, Movie>> schedules = new HashMap<>();
+    Random random = new Random();
 
-    // 模擬根據使用者權限生成的資料
-    if ("Admin".equals(userName) || "老虎城".equals(userName)) {
-      schedules.add("老虎城: 10:00-12:00");
-      schedules.add("老虎城: 12:30-14:30");
-    }
-    if ("Admin".equals(userName) || "大遠百".equals(userName)) {
-      schedules.add("大遠百: 15:00-17:00");
-      schedules.add("大遠百: 17:30-19:30");
-    }
-    if ("Admin".equals(userName) || "新時代".equals(userName)) {
-      schedules.add("新時代: 20:00-22:00");
+    for (String cinema : CINEMAS) {
+      Map<String, Movie> cinemaSchedule = new HashMap<>();
+      List<Movie> availableMovies = new ArrayList<>(movieList);
+      Collections.shuffle(availableMovies);
+
+      for (String timeSlot : TIME_SLOTS) {
+        if (!availableMovies.isEmpty()) {
+          Movie movie = availableMovies.remove(0);
+          cinemaSchedule.put(timeSlot, movie);
+        } else {
+          // 如果電影用完了，重新填充並洗牌
+          availableMovies.addAll(movieList);
+          Collections.shuffle(availableMovies);
+          Movie movie = availableMovies.remove(0);
+          cinemaSchedule.put(timeSlot, movie);
+        }
+      }
+      schedules.put(cinema, cinemaSchedule);
     }
 
     return schedules;
