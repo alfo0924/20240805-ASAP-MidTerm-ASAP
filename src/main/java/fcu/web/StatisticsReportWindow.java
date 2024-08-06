@@ -47,7 +47,7 @@ public class StatisticsReportWindow extends JFrame {
 
     private void generateReport() {
         StringBuilder sb = new StringBuilder();
-        sb.append("電影熱門統計報表:\n\n");
+        sb.append("熱門電影票房總計:\n\n");
 
         // 為每部電影生成隨機票房
         for (Movie movie : this.movieList) {
@@ -65,7 +65,7 @@ public class StatisticsReportWindow extends JFrame {
         // 顯示排序後的電影列表
         for (int i = 0; i < this.movieList.size(); i++) {
             Movie movie = this.movieList.get(i);
-            sb.append(String.format("%d. %s 的票房: $%,d\n", i + 1, movie.getTitle(), movie.getBoxOffice()));
+            sb.append(String.format("%d. %s : $%,d\n", i + 1, movie.getTitle(), movie.getBoxOffice()));
         }
 
         reportArea.setText(sb.toString());
