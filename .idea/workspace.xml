@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.83 修正報表:票房排序">
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.84 修正撥放管理:增加撥放顯示多樣性">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/PlaybackManagementWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722904498990</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1.84 修正撥放管理:增加撥放顯示多樣性">
+      <option name="closed" value="true" />
+      <created>1722905944245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722905944245</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1.84 修正撥放管理:增加撥放顯示多樣性">
+      <option name="closed" value="true" />
+      <created>1722906049314</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722906049314</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +214,7 @@
     <MESSAGE value="1.75 統計報表:&#10;新增統計報表介面" />
     <MESSAGE value="1.83 介面細項修正" />
     <MESSAGE value="1.83 修正報表:票房排序" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.83 修正報表:票房排序" />
+    <MESSAGE value="1.84 修正撥放管理:增加撥放顯示多樣性" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.84 修正撥放管理:增加撥放顯示多樣性" />
   </component>
 </project>

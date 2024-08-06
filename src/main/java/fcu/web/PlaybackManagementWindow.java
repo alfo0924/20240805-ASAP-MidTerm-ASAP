@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.List;
 
@@ -14,6 +16,8 @@ public class PlaybackManagementWindow extends JFrame {
   private JFrame parentFrame;
   private final String[] CINEMAS = {"老虎城", "大遠百", "新時代"};
   private final String[] TIME_SLOTS = {"10:00-12:00", "12:30-14:30", "15:00-17:00", "17:30-19:30", "20:00-22:00"};
+  private final LocalDate START_DATE = LocalDate.of(2024, 8, 6);
+  private final LocalDate END_DATE = LocalDate.of(2024, 8, 9);
 
   public PlaybackManagementWindow(String currentUser, JFrame parentFrame) {
     this.currentUser = currentUser;
@@ -72,46 +76,51 @@ public class PlaybackManagementWindow extends JFrame {
   }
 
   private void setupPlaybackList() {
-    Map<String, Map<String, Movie>> schedules = generateSchedules();
+    Map<LocalDate, Map<String, Map<String, Movie>>> schedules = generateSchedules();
     StringBuilder sb = new StringBuilder();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    for (String cinema : CINEMAS) {
-      if ("Admin".equals(currentUser) || cinema.equals(currentUser)) {
-        sb.append(cinema).append(":\n");
-        Map<String, Movie> cinemaSchedule = schedules.get(cinema);
-        for (String timeSlot : TIME_SLOTS) {
-          Movie movie = cinemaSchedule.get(timeSlot);
-          sb.append(timeSlot).append(" - ").append(movie.getTitle()).append("\n");
+    for (LocalDate date = START_DATE; !date.isAfter(END_DATE); date = date.plusDays(1)) {
+      sb.append("日期: ").append(date.format(formatter)).append("\n");
+      for (String cinema : CINEMAS) {
+        if ("Admin".equals(currentUser) || cinema.equals(currentUser)) {
+          sb.append("  ").append(cinema).append(":\n");
+          Map<String, Movie> cinemaSchedule = schedules.get(date).get(cinema);
+          for (String timeSlot : TIME_SLOTS) {
+            Movie movie = cinemaSchedule.get(timeSlot);
+            sb.append("    ").append(timeSlot).append(" - ").append(movie.getTitle()).append("\n");
+          }
+          sb.append("\n");
         }
-        sb.append("\n");
       }
+      sb.append("\n");
     }
 
     playbackArea.setText(sb.toString());
   }
 
-  private Map<String, Map<String, Movie>> generateSchedules() {
-    Map<String, Map<String, Movie>> schedules = new HashMap<>();
+  private Map<LocalDate, Map<String, Map<String, Movie>>> generateSchedules() {
+    Map<LocalDate, Map<String, Map<String, Movie>>> schedules = new HashMap<>();
     Random random = new Random();
 
-    for (String cinema : CINEMAS) {
-      Map<String, Movie> cinemaSchedule = new HashMap<>();
-      List<Movie> availableMovies = new ArrayList<>(movieList);
-      Collections.shuffle(availableMovies);
+    for (LocalDate date = START_DATE; !date.isAfter(END_DATE); date = date.plusDays(1)) {
+      Map<String, Map<String, Movie>> dateSchedule = new HashMap<>();
+      for (String cinema : CINEMAS) {
+        Map<String, Movie> cinemaSchedule = new HashMap<>();
+        List<Movie> availableMovies = new ArrayList<>(movieList);
+        Collections.shuffle(availableMovies);
 
-      for (String timeSlot : TIME_SLOTS) {
-        if (!availableMovies.isEmpty()) {
-          Movie movie = availableMovies.remove(0);
-          cinemaSchedule.put(timeSlot, movie);
-        } else {
-          // 如果電影用完了，重新填充並洗牌
-          availableMovies.addAll(movieList);
-          Collections.shuffle(availableMovies);
+        for (String timeSlot : TIME_SLOTS) {
+          if (availableMovies.isEmpty()) {
+            availableMovies.addAll(movieList);
+            Collections.shuffle(availableMovies);
+          }
           Movie movie = availableMovies.remove(0);
           cinemaSchedule.put(timeSlot, movie);
         }
+        dateSchedule.put(cinema, cinemaSchedule);
       }
-      schedules.put(cinema, cinemaSchedule);
+      schedules.put(date, dateSchedule);
     }
 
     return schedules;
