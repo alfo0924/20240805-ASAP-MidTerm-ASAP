@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.85 修正報表:修改名稱">
-      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" afterDir="false" />
+    <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.852 修正報表:修改名稱">
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/ScheduleManagementWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/ScheduleManagementWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722908304176</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1.852 修正報表:修改名稱">
+      <option name="closed" value="true" />
+      <created>1722908572262</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722908572262</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +240,7 @@
     <MESSAGE value="1.84 修正撥放管理:增加撥放顯示多樣性" />
     <MESSAGE value="1.85 修正撥放管理:增加日期" />
     <MESSAGE value="1.85 修正報表:修改名稱" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.85 修正報表:修改名稱" />
+    <MESSAGE value="1.852 修正報表:修改名稱" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.852 修正報表:修改名稱" />
   </component>
 </project>
