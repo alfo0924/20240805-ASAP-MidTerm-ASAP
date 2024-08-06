@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20c2c85f-6bf6-4eef-b579-b85b83bd813d" name="Changes" comment="1.83 介面細項修正">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fcu/web/StatisticsReportWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

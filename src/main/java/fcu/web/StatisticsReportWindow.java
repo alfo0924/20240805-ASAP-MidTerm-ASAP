@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class StatisticsReportWindow extends JFrame {
     private JTextArea reportArea;
@@ -12,7 +15,7 @@ public class StatisticsReportWindow extends JFrame {
     private JFrame parentFrame;
 
     public StatisticsReportWindow(List<Movie> movieList, JFrame parentFrame) {
-        this.movieList = movieList;
+        this.movieList = new ArrayList<>(movieList); // 創建一個新的列表以避免修改原始列表
         this.parentFrame = parentFrame;
         setTitle("統計報表");
         setSize(600, 400);
@@ -44,11 +47,25 @@ public class StatisticsReportWindow extends JFrame {
 
     private void generateReport() {
         StringBuilder sb = new StringBuilder();
-        sb.append("電影熱門統計報表:\n");
+        sb.append("電影熱門統計報表:\n\n");
 
-        for (Movie movie : movieList) {
-            movie.generateRandomBoxOffice(); // Generate a new random box office value
-            sb.append(movie.getTitle()).append(" 的票房: $").append(String.format("%,d", movie.getBoxOffice())).append("\n");
+        // 為每部電影生成隨機票房
+        for (Movie movie : this.movieList) {
+            movie.generateRandomBoxOffice();
+        }
+
+        // 根據票房排序電影列表（從高到低）
+        Collections.sort(this.movieList, new Comparator<Movie>() {
+            @Override
+            public int compare(Movie m1, Movie m2) {
+                return Integer.compare(m2.getBoxOffice(), m1.getBoxOffice());
+            }
+        });
+
+        // 顯示排序後的電影列表
+        for (int i = 0; i < this.movieList.size(); i++) {
+            Movie movie = this.movieList.get(i);
+            sb.append(String.format("%d. %s 的票房: $%,d\n", i + 1, movie.getTitle(), movie.getBoxOffice()));
         }
 
         reportArea.setText(sb.toString());
