@@ -29,7 +29,7 @@ public class ScheduleManagementWindow extends JFrame {
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setLocationRelativeTo(null);
 
-    setLayout(new GridLayout(6, 2, 10, 10)); // 增加一行以容納返回按鈕
+    setLayout(new GridLayout(6, 2, 10, 10));
 
     setupUIComponents();
   }
@@ -64,7 +64,7 @@ public class ScheduleManagementWindow extends JFrame {
     add(cinemaField);
     add(new JLabel());
     add(addButton);
-    add(new JLabel()); // 空白占位符
+    add(new JLabel());
     add(backButton);
   }
 
@@ -103,7 +103,7 @@ public class ScheduleManagementWindow extends JFrame {
     }
 
     if (availableCinemas.isEmpty() || errorOccurred) {
-      availableCinemas.clear();  // 確保列表為空
+      availableCinemas.clear();
       availableCinemas.add("無可用影城");
     }
 
@@ -112,12 +112,17 @@ public class ScheduleManagementWindow extends JFrame {
   }
 
   private void handleAddSchedule() {
-    String movieName = ((Movie) movieNameField.getSelectedItem()).getTitle();
+    Movie selectedMovie = (Movie) movieNameField.getSelectedItem();
+    if (selectedMovie == null) {
+      JOptionPane.showMessageDialog(this, "請選擇電影！", "錯誤", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
+    String movieName = selectedMovie.getTitle();
     String date = dateField.getText();
     String time = (String) timeField.getSelectedItem();
     String cinema = (String) cinemaField.getSelectedItem();
 
-    if (movieName.isEmpty() || date.isEmpty() || "無可用影城".equals(cinema)) {
+    if (date.isEmpty() || "無可用影城".equals(cinema)) {
       JOptionPane.showMessageDialog(this, "請填寫所有欄位並確保有可用影城！", "錯誤", JOptionPane.ERROR_MESSAGE);
     } else {
       if (!isValidDate(date)) {
@@ -146,7 +151,7 @@ public class ScheduleManagementWindow extends JFrame {
     movieNameField.setSelectedIndex(0);
     dateField.setText("");
     timeField.setSelectedIndex(0);
-    setupCinemaField();  // 重新設置影城選項
+    setupCinemaField();
   }
 
   private List<Movie> getMovieList() {
