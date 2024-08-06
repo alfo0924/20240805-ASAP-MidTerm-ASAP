@@ -47,7 +47,7 @@ public class StatisticsReportWindow extends JFrame {
 
     private void generateReport() {
         StringBuilder sb = new StringBuilder();
-        sb.append("熱門電影票房總計:\n\n");
+        sb.append("電影票房總計:\n\n");
 
         // 為每部電影生成隨機票房
         for (Movie movie : this.movieList) {
