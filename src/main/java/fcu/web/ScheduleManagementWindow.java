@@ -1,13 +1,13 @@
 package fcu.web;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
+import java.sql.SQLException;
 
 public class ScheduleManagementWindow extends JFrame {
 
@@ -70,14 +70,9 @@ public class ScheduleManagementWindow extends JFrame {
 
   private void setupMovieNameField() {
     List<Movie> movieList = getMovieList();
-    movieNameField = new JComboBox<>(movieList.toArray(new Movie[0]));
+    CustomComboBoxModel model = new CustomComboBoxModel(movieList.toArray(new Movie[0]));
+    movieNameField = new JComboBox<>(model);
     movieNameField.setRenderer(new MovieRenderer());
-    movieNameField.addActionListener(e -> {
-      Movie selectedMovie = (Movie) movieNameField.getSelectedItem();
-      if (selectedMovie != null && selectedMovie.getEndDate().compareTo("2024-06-01") <= 0) {
-        movieNameField.setSelectedIndex(-1);
-      }
-    });
   }
 
   private void setupCinemaField() {
@@ -163,7 +158,6 @@ public class ScheduleManagementWindow extends JFrame {
     movieList.add(new Movie(5, "腦筋急轉彎2", "2024-06-07", "2024-07-17", "皮克斯經典動畫續集，情感角色再度回歸。", "凱爾西·曼恩", "艾米·波勒, 菲利斯·史密斯, 劉易·布萊克, 托尼·海爾, 麗莎·拉琵拉, 瑪雅·霍克, 阿尤·艾德維利, 阿黛兒·艾薩卓普洛斯, 保羅·華特·豪澤"));
     movieList.add(new Movie(6, "摩托車騎士", "2024-06-07", "2024-07-17", "摩托車幫派的犯罪故事。", "傑夫·尼科爾斯", "奧斯汀·巴特勒, 湯姆·哈迪, 喬迪·科默, 邁克爾·珊農, 諾曼·瑞杜斯, 博伊德·霍布魯克"));
     movieList.add(new Movie(7, "寂靜之地：第一天", "2024-06-07", "2024-07-17", "《寂靜之地》前傳，揭示怪物來襲的第一天。", "邁克爾·薩諾斯基", "露琵塔·尼詠歐, 約瑟夫·奎因, 亞歷克斯·沃爾夫, 吉蒙·翰蘇"));
-    // Add more movies from the original list if needed
     return movieList;
   }
 
@@ -182,23 +176,29 @@ public class ScheduleManagementWindow extends JFrame {
         setText(movie.getTitle());
         if (movie.getEndDate().compareTo("2024-06-01") <= 0) {
           setForeground(Color.GRAY);
+          setEnabled(false);
         } else {
           setForeground(list.getForeground());
+          setEnabled(true);
         }
       }
       return this;
     }
   }
 
-  private class DatabaseManager {
-    public boolean getUserFeature(String user, String feature) throws SQLException {
-      // Simulate getting user feature from database
-      return true;
+  private class CustomComboBoxModel extends DefaultComboBoxModel<Movie> {
+    public CustomComboBoxModel(Movie[] items) {
+      super(items);
     }
 
-    public void addSchedule(String movieName, String date, String time, String cinema) {
-      // Simulate adding schedule to database
-      System.out.println("新增場次: " + movieName + ", 日期: " + date + ", 時間: " + time + ", 影城: " + cinema);
+    @Override
+    public void setSelectedItem(Object anObject) {
+      if (anObject instanceof Movie) {
+        Movie movie = (Movie) anObject;
+        if (movie.getEndDate().compareTo("2024-06-01") > 0) {
+          super.setSelectedItem(anObject);
+        }
+      }
     }
   }
 
